@@ -1,0 +1,13 @@
+{% extends 'gullar/base.html' %}
+
+{% block title %}Barcha Gullar{% endblock %}
+
+{% block content %}
+    {% load gul_filters %}
+    <h2>Barcha Gullar</h2>
+    <ul>
+        {% for gul in gullar %}
+            <li>{{ gul.nom }} - {{ gul.tur.nom }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
